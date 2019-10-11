@@ -6,7 +6,7 @@ import CustonButton from "../custombutton/custombutton.component";
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 
 import "./signup.style.scss";
-import SignIn from "../signin/signin.component";
+
 
 class SignUp extends React.Component {
 	constructor(props) {
@@ -23,7 +23,7 @@ class SignUp extends React.Component {
 	handleSubmit = async event => {
 		event.preventDefault();
 		const { displayName, email, password, confirmPassword } = this.state;
-		if (password != confirmPassword) {
+		if (password !== confirmPassword) {
 			alert("Your passwords do not match");
 			return;
 		}
